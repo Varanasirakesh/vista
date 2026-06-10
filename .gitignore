@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Docker
+*.pid
+
+# Redis dumps
+dump.rdb
+
+# Data folders (raw documents should not go to GitHub)
+data/raw/*
+data/processed/*
+data/extracted/*
+
+# Vector databases
+qdrant_storage/
+
+# Ollama / local model artifacts
+models/
+
+# Temporary files
+tmp/
+temp/
+
+# Streamlit
+.streamlit/secrets.toml
