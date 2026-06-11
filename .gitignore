@@ -64,3 +64,16 @@ temp/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Infrastructure state
+data/postgres/
+data/qdrant/
+
+# Redis persistence (future)
+data/redis/
+
+# Ollama models (if local)
+models/
+
+# Logs
+logs/

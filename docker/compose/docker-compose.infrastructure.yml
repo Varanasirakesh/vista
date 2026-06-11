@@ -1,0 +1,30 @@
+services:
+  postgres: 
+    image: postgres:16
+    container_name: vista-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../../data/postgres:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: vista-redis
+    ports:
+      - "${REDIS_PORT}:6379"
+    restart: unless-stopped
+    
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: vista-qdrant
+    ports:
+      - "${QDRANT_HTTP_PORT}:6333"
+      - "${QDRANT_GRPC_PORT}:6334"
+    volumes:
+      - ../../data/qdrant:/qdrant/storage
+    restart: unless-stopped
