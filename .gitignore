@@ -48,12 +48,9 @@ dist/
 dump.rdb
 
 # Data folders (raw documents should not go to GitHub)
-data/raw/*
-data/processed/*
-data/extracted/*
-
-# Vector databases
-qdrant_storage/
+data/raw/**
+data/processed/**
+data/extracted/**
 
 # Ollama / local model artifacts
 models/
