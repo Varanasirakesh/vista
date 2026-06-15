@@ -53,6 +53,12 @@ The primary goals of this project are:
 * Parent-child retrieval.
 * Cross-encoder reranking.
 
+### Retrieval Strategies Used:
+
+* Dense Retrieval (BGE + Qdrant)
+* Sparse Retrieval (BM25)
+* Hybrid Retrieval (RRF)
+
 ---
 
 ### Generation Pipeline

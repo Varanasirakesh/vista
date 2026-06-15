@@ -111,3 +111,16 @@ How did you evaluate your RAG system initially?
 You can answer:
 
 "I established a small manually curated evaluation set to validate retrieval quality, grounding behavior, and out-of-domain handling before introducing automated evaluation frameworks.
+
+Why BM25Okapi instead of BM25Plus?
+
+A strong answer is:
+
+"Since our retrieval operates over relatively uniform chunk sizes, BM25Okapi provides a simple and well-established baseline. More sophisticated variants such as BM25Plus become more beneficial when document length variability is significant."
+
+Why RRF?
+
+Because it rewards:
+
+Documents that consistently appear
+across multiple retrievers.
