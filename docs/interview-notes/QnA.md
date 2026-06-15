@@ -49,3 +49,65 @@ Answer:
 You can answer:
 
 "I documented the pipeline stages and artifact lifecycle to simplify onboarding, debugging, and future enhancements."
+
+Why did you separate extraction, chunking, and embeddings?
+
+You can answer:
+
+"To enable independent experimentation. I could modify embedding models or chunking strategies without repeatedly processing the source documents."
+
+Why start with dense retrieval before hybrid retrieval?
+
+Answer:
+
+"I established a dense retrieval baseline first to understand its performance characteristics before introducing additional complexity through hybrid search."
+
+Why did you choose element-aware chunking?
+
+Answer:
+
+"Element-aware chunking preserved document structure and layout metadata, enabling precise citations and region-level highlighting while minimizing semantic fragmentation.
+
+How did you improve chunk quality?
+
+Answer:
+
+"I introduced an element-aware chunking strategy where different document structures followed different processing paths, reducing retrieval noise while preserving important contextual metadata."
+
+Why BGE?
+
+"BGE models provided strong retrieval performance while remaining lightweight enough for local experimentation."
+
+Why normalize embeddings?
+
+"Normalization ensured consistent cosine similarity behavior during retrieval."
+
+Why do you prefer module execution (python -m)?
+
+You can say:
+
+"It ensures imports resolve relative to the project root and aligns with how applications are executed in packaged environments."
+
+Why normalize embeddings?
+
+You can answer:
+
+"Normalization ensures cosine similarity behaves consistently during vector search."
+
+Why didn't you start directly with hybrid retrieval?
+
+Answer:
+
+"I established a dense retrieval baseline first to understand its behavior. Once evaluated, I introduced BM25 and reciprocal rank fusion to improve recall while preserving a measurable improvement path."
+
+How did you reduce hallucinations?
+
+Answer:
+
+"I used retrieval-augmented generation with strict prompting that constrained the LLM to answer only from retrieved evidence."
+
+How did you evaluate your RAG system initially?
+
+You can answer:
+
+"I established a small manually curated evaluation set to validate retrieval quality, grounding behavior, and out-of-domain handling before introducing automated evaluation frameworks.

@@ -74,3 +74,6 @@ models/
 
 # Logs
 logs/
+
+# testing
+tests/
